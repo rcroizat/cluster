@@ -32,26 +32,26 @@
                 <div class="row">
                     <div class="input-field col s6">
                         <i class="material-icons prefix">http</i>
-                        <input id="link" type="text" class="validate">
+                        <input required id="link" type="text" class="validate" name="link">
                         <label for="link">Lien du site (il sera suivi de .cluster.com)</label>
                     </div>
                     <div class="input-field col s6">
                         <i class="material-icons prefix">label</i>
-                        <input id="title" type="text" class="validate">
+                        <input required id="title" type="text" class="validate" name="title">
                         <label for="title">Titre</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s6">
-                        <select>
+                        <select  name="type">
                             <option value="" disabled selected>Choisissez le type des offres</option>
                             <option value="bien">Bien</option>
-                            <option value="service">Service</option>
+                            <option disabled value="service">Service (à venir)</option>
                         </select>
                         <label>Type</label>
                     </div>
                     <div class="input-field col s6">
-                        <select multiple>
+                        <select   multiple  name="category">
                             <option value="" disabled selected>Sélectionnez la catégorie de votre platforme</option>
                             <option value="bien">Immobilier</option>
                             <option value="service">Bricolage</option>
@@ -64,14 +64,15 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="material-icons prefix">description</i>
-                        <textarea id="description" id="description" class="materialize-textarea validate" length="150"></textarea>
+                        <textarea required data-error="wrong" name="description" id="description" id="description" class="materialize-textarea validate" length="150"></textarea>
                         <label for="description">Description</label>
                     </div>
                 </div>
-            </form>
-            <button class="btn waves-effect waves-light" type="submit" form="formCreate" name="action">Suivant
+
+            <button class="btn waves-effect waves-light" type="submit" form="formCreate">Suivant
                 <i class="material-icons right">send</i>
             </button>
+            </form>
         </div>
     </div>
     <footer class="page-footer teal">
