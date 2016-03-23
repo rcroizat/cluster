@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Home</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/global.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="pages/inscription.html">S'inscrire</a></li>
+        <li><a href="pages/login.html">Se connecter</a></li>
+        <li><a href="#">Mon compte</a></li>
+        <li><a href="pages/add_annonce.html">Ajouter une annonce</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="pages/inscription.html">S'inscrire</a></li>
+        <li><a href="pages/login.html">Se connecter</a></li>
+        <li><a href="#">Mon compte</a></li>
+        <li><a href="pages/add_annonce.html">Ajouter une annonce</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text" contenteditable="true">Starter Template</h1>
+      <div class="row center">
+        <h5 class="header col s12 light" contenteditable="true">A modern responsive front-end framework based on Material Design</h5>
+      </div>
+      <div class="row center">
+        <form id="form_search" class="col s12" method="post" action="pages/search.html">
+          <div class="row">
+
+            <div class="input-field col l2 m4 s12">
+              <i class="material-icons prefix">search</i>
+              <input id="search" type="text" class="validate">
+              <label for="search">Je recherche ...</label>
+            </div>
+
+            <div class="input-field col l2 m4 s12">
+              <i class="material-icons prefix">query_builder</i>
+              <input id="date" type="date" class="datepicker">
+              <label for="date">Date de début</label>
+            </div>
+
+            <div class="input-field col l2 m4 s12">
+              <i class="material-icons prefix">query_builder</i>
+              <input id="date" type="date" class="datepicker">
+              <label for="date">Date de fin</label>
+            </div>
+
+            <div class="input-field col l2 m4 s12">
+              <div id="price_slider"></div>
+              <span id="value-min"></span>€
+              <span id="value-max"></span>€
+            </div>
+
+            <div class="input-field col l2 m4 s12">
+              <select multiple>
+                <option value="" disabled selected>Sélectionnez votre(vos) département(s) de recherche</option>
+                <option value="paris">75 - Paris</option>
+                <option value="seine-et-marne">77 - Seine et Marne</option>
+                <option value="yvelines">78 - Yvelines</option>
+                <option value="essonne">91 - Essonne</option>
+                <option value="hauts-de-seine">92 - Hauts-de-Seine</option>
+                <option value="seine-saint-denis">93 - Seine-Saint-Denis</option>
+                <option value="val-de-marne">94 - Val-de-Marne</option>
+                <option value="val-doise">95 - Val d'Oise</option>
+              </select>
+              <label>Départements</label>
+            </div>
+
+            <div class="input-field col l2 m4 s12">
+              <button class="btn waves-effect waves-light" type="submit" name="action">Rechercher</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <br><br>
+
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
+            <h5 class="center" contenteditable="true">Speeds up development</h5>
+
+            <p class="light" contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit rerum praesentium ullam excepturi dolores doloremque, odio aliquid ea iusto, pariatur quo! Consequuntur alias ab voluptate facilis corrupti, unde rerum, vitae.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
+            <h5 class="center" contenteditable="true">User Experience Focused</h5>
+
+            <p class="light" contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius velit hic dolore error quibusdam nisi, obcaecati nobis veritatis numquam dolorum maiores qui accusamus impedit officia mollitia iste! Iure, nostrum, dolorum!</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
+            <h5 class="center" contenteditable="true">Easy to work with</h5>
+
+            <p class="light" contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur laudantium doloremque, quasi nobis, blanditiis quos necessitatibus esse, veritatis atque officiis modi aliquid voluptatum enim quaerat obcaecati quo quidem minus pariatur!</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <br><br>
+
+    <div class="section">
+
+    </div>
+  </div>
+
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
+  <script type="text/javascript" src="ckeditor/adapters/jquery.js"></script>
+  <script type="text/javascript" src="materialize-js/bin/materialize.min.js"></script>
+  <script type="text/javascript" src="nouislider-js/nouislider.js"></script>
+  <script type="text/javascript" src="js/production.js"></script>
+
+  </body>
+</html>
