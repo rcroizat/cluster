@@ -2,9 +2,9 @@
 
 // connexion a la base de donnees
 
-$mysql_host = "localhost";
+$mysql_host = "149.202.49.52";
 $mysql_user = "root";
-$mysql_pwd = "";
+$mysql_pwd = "root";
 $conn_error = "Connexion a la base de donnee impossible";
 $mysql_db = 'cluster';
 $db = null;
