@@ -21,8 +21,8 @@ class ValThemeHandler {
 	    VALUES (:id_website, :name, :value";
 
 	    $query_insert = $this->db->prepare($sql_insert);
-	    $query_insert->bindValue('id_website', $valThemeValue, PDO::PARAM_INT);
-	    $query_insert->bindValue('name', $valThemeValue, PDO::PARAM_STR);
+	    $query_insert->bindValue('id_website', $valThemeIdWebsite, PDO::PARAM_INT);
+	    $query_insert->bindValue('name', $valThemeName, PDO::PARAM_STR);
 	    $query_insert->bindValue('value', $valThemeValue, PDO::PARAM_STR);
 
 	    $query_insert->execute();

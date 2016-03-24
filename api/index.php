@@ -9,6 +9,7 @@ ini_set('display_errors', 1);
 
 // APP
 require('handler/WebsiteHandler.php');
+require('handler/InputHandler.php');
 require('handler/ThemeHandler.php');
 require('handler/ValThemeHandler.php');
 require('handler/UserHandler.php');
@@ -28,6 +29,9 @@ Toro::serve(array(
 	"1/website/:number"			=> "WebsiteHandler",			// GET
 	"1/website/"				=> "WebsiteHandler",			// POST
 
+	"1/input/:number"			=> "InputHandler",				// GET
+	"1/input/"					=> "InputHandler"				// POST
+	
 	"1/theme/:number"			=> "ThemeHandler",				// GET
 	"1/theme/"					=> "ThemeHandler",				// POST
 
@@ -38,6 +42,12 @@ Toro::serve(array(
 	"1/user/"					=> "UserHandler",				// POST
 
 	"1/type/:number"			=> "TypeHandler",				// GET
-	"1/type/"					=> "TypeHandler"				// POST
+	"1/type/"					=> "TypeHandler",				// POST
+
+	"1/websitecat/:number"		=> "WebsiteCatHandler",			// GET
+	"1/websitecat/"				=> "WebsiteCatHandler",			// POST
+
+	"1/cat/:number"				=> "CatHandler",				// GET
+	"1/cat/"					=> "CatHandler"					// POST
 
 ));
