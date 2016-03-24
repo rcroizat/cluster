@@ -9,6 +9,8 @@ ini_set('display_errors', 1);
 
 // APP
 require('handler/WebsiteHandler.php');
+require('handler/ThemeHandler.php');
+require('handler/ValThemeHandler.php');
 
 require('db.php');
 require('Toro.php');
@@ -22,6 +24,12 @@ ToroHook::add("404", function() {
 Toro::serve(array(
 
 	"1/website/:number"			=> "WebsiteHandler",			// GET
-	"1/website/"				=> "WebsiteHandler"				// POST
+	"1/website/"				=> "WebsiteHandler",			// POST
+
+	"1/theme/:number"			=> "ThemeHandler",				// GET
+	"1/theme/"					=> "ThemeHandler",				// POST
+
+	"1/valTheme/:number"		=> "ValThemeHandler",			// GET
+	"1/valTheme/"				=> "ValThemeHandler"			// POST
 
 ));
