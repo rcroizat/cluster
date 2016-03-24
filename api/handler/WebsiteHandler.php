@@ -30,11 +30,11 @@ class WebsiteHandler {
 
 	    $query_insert->execute();
 
-	    $userId = $this->db->lastInsertId();
+	    $websiteId = $this->db->lastInsertId();
 
 	    header("HTTP/1.1 200 OK");
 	    // header("HTTP/1.1 400 Bad Request");
-		echo json_encode(array('id' => $userId ););
+		echo json_encode(array('id' => $websiteId ););
 	}
 
 	function get($websiteId){

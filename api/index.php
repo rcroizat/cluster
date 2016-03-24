@@ -8,7 +8,7 @@ error_reporting(E_ALL | E_STRICT);
 ini_set('display_errors', 1);
 
 // APP
-require('handler/website/WebsiteHandler.php');
+require('handler/WebsiteHandler.php');
 
 require('db.php');
 require('Toro.php');
