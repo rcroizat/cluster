@@ -34,12 +34,12 @@ class ValThemeHandler {
 		echo json_encode(array('id' => $valThemeId ););
 	}
 
-	function get($websiteId){
+	function get($valThemeId){
 
 		global $db;
 		$this->db = &$db;
 
-		$sql = "SELECT * FROM `website` WHERE id = '".$websiteId."';";
+		$sql = "SELECT * FROM `val_theme` WHERE id = '".$valThemeId."';";
 		$stmt =  $this->db->query($sql);
 		$website = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
