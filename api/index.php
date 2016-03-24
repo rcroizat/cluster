@@ -12,6 +12,7 @@ require('handler/WebsiteHandler.php');
 require('handler/ThemeHandler.php');
 require('handler/ValThemeHandler.php');
 require('handler/UserHandler.php');
+require('handler/TypeHandler.php');
 
 require('db.php');
 require('Toro.php');
@@ -31,9 +32,12 @@ Toro::serve(array(
 	"1/theme/"					=> "ThemeHandler",				// POST
 
 	"1/valTheme/:number"		=> "ValThemeHandler",			// GET
-	"1/valTheme/"				=> "ValThemeHandler"			// POST
+	"1/valTheme/"				=> "ValThemeHandler",			// POST
 
 	"1/user/:number"			=> "UserHandler",				// GET
-	"1/user/"					=> "UserHandler"				// POST
+	"1/user/"					=> "UserHandler",				// POST
+
+	"1/type/:number"			=> "TypeHandler",				// GET
+	"1/type/"					=> "TypeHandler"				// POST
 
 ));
