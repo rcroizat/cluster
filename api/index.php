@@ -14,6 +14,7 @@ require('handler/ThemeHandler.php');
 require('handler/ValThemeHandler.php');
 require('handler/UserHandler.php');
 require('handler/TypeHandler.php');
+require('handler/ValHandler.php');
 
 require('db.php');
 require('Toro.php');
@@ -48,6 +49,9 @@ Toro::serve(array(
 	"1/websitecat/"				=> "WebsiteCatHandler",			// POST
 
 	"1/cat/:number"				=> "CatHandler",				// GET
-	"1/cat/"					=> "CatHandler"					// POST
+	"1/cat/"					=> "CatHandler",				// POST
+
+	"1/val/:number"				=> "ValHandler",				// GET
+	"1/val/"					=> "ValHandler"					// POST
 
 ));
