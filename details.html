@@ -32,7 +32,7 @@
                 <h4>Fiche produit</h4>
                 <div class="section col s6 offset-s2" field="1">
                     <h5><div class="edit">Nom du champs</div></h5>
-                    <div class="input-field col s4 editeur">
+                    <div class="input-field col s4 ">
                         <select>
                             <option value="" disabled selected>Type du champ</option>
                             <option value="date">date</option>
@@ -40,15 +40,13 @@
                             <option value="numéro">numéro</option>
                         </select>
                     </div>
-                    <p class="editable">Type du champs
-                        <a href="#!" class="secondary-content"><i class="material-icons delete" field="1">delete</i></a>
-                    </p>
+                    <a href="#!" class="secondary-content"><i class="material-icons delete" field="1">delete</i></a>
                     <div class="clear"></div>
                     <div class="divider"></div>
                 </div>
                 <div class="section col s6 offset-s2" field="2">
                     <h5><div class="edit">Nom du champs</div></h5>
-                    <div class="input-field col s4 editeur">
+                    <div class="input-field col s4 ">
                         <select>
                             <option value="" disabled selected>Type du champ</option>
                             <option value="date">date</option>
@@ -56,15 +54,13 @@
                             <option value="numéro">numéro</option>
                         </select>
                     </div>
-                    <p class="editable">Type du champs
-                        <a href="#!" class="secondary-content"><i class="material-icons delete" field="2">delete</i></a>
-                    </p>
+                    <a href="#!" class="secondary-content"><i class="material-icons delete" field="2">delete</i></a>
                     <div class="clear"></div>
                     <div class="divider"></div>
                 </div>
                 <div class="section col s6 offset-s2" field="3">
                     <h5><div class="edit" >Nom du champs</div></h5>
-                    <div class="input-field col s4 editeur">
+                    <div class="input-field col s4 ">
                         <select>
                             <option value="" disabled selected>Type du champ</option>
                             <option value="date">date</option>
@@ -72,9 +68,7 @@
                             <option value="numéro">numéro</option>
                         </select>
                     </div>
-                    <p class="editable">Type du champs
-                        <a href="#!" class="secondary-content"><i class="material-icons delete" field="3">delete</i></a>
-                    </p>
+                    <a href="#!" class="secondary-content"><i class="material-icons delete" field="3">delete</i></a>
                     <div class="clear"></div>
                     <div class="divider"></div>
                 </div>
@@ -129,31 +123,7 @@
     <script src="js/materialize.js"></script>
     <script src="js/init.js"></script>
     <script src="js/editable.js"></script>
+    <script src="js/details.js"></script>
 </body>
-<script>
-$(document).ready(function() {
-
-
-$('select').material_select();
-
-$('.delete').click(function() {
-    if($(".section[field]").length > 1){ // il doit rester un champs minimum
-        console.log('kpkpkpp');
-        var field = $(this).attr('field');
-        $("[field=" + field + "]").remove();
-    }
-});
-    $('.add').click(function() {
-        var newField = $(".section[field]").length; // compte les div class section 
-        $('#formDetails').append('<div class="section col s6 offset-s2" field="' + newField + '"><h5><div class="edit" >Nom du champs</div></h5><div class="input-field col s4 editeur"><select><option value="" disabled selected>Type du champ</option><option value="date">date</option><option value="text">text</option><option value="numéro">numéro</option></select></div><p class="editable">Type du champs<a href="#!" class="secondary-content"><i class="material-icons delete" field="' + newField + '">delete</i></a></p><div class="clear"></div><div class="divider"></div></div>');
-    });
-
-    $('.edit').editable('http://www.example.com/save.php', { // envoie une requete ajax avec les data du champs input
-        indicator: 'Saving...',
-        tooltip: 'Click to edit...'
-    });
-});
-
-</script>
 
 </html>

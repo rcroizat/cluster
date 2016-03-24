@@ -11260,9 +11260,6 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   clear:  both;
 }
 
-.editeur{
-  display:  none;
-}
 
 .editable{
   display:  block;
