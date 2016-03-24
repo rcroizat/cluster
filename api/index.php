@@ -13,8 +13,13 @@ require('handler/InputHandler.php');
 require('handler/ThemeHandler.php');
 require('handler/ValThemeHandler.php');
 require('handler/UserHandler.php');
+
+require('handler/WebsiteCatHandler.php');
+require('handler/CatHandler.php');
+require('handler/ItemHandler.php');
 require('handler/TypeHandler.php');
 require('handler/ValHandler.php');
+
 
 require('db.php');
 require('Toro.php');
@@ -52,6 +57,9 @@ Toro::serve(array(
 	"1/cat/"					=> "CatHandler",				// POST
 
 	"1/val/:number"				=> "ValHandler",				// GET
-	"1/val/"					=> "ValHandler"					// POST
+	"1/val/"					=> "ValHandler",				// POST
+
+	"1/item/:number"			=> "ItemHandler",				// GET
+	"1/item/"					=> "ItemHandler"				// POST
 
 ));
