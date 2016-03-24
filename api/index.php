@@ -38,6 +38,12 @@ Toro::serve(array(
 	"1/valTheme/"				=> "ValThemeHandler"			// POST
 
 	"1/user/:number"			=> "UserHandler",				// GET
-	"1/user/"					=> "UserHandler"				// POST
+	"1/user/"					=> "UserHandler",				// POST
+
+	"1/websitecat/:number"		=> "WebsiteCatHandler",			// GET
+	"1/websitecat/"				=> "WebsiteCatHandler",			// POST
+
+	"1/cat/:number"				=> "CatHandler",				// GET
+	"1/cat/"					=> "CatHandler"					// POST
 
 ));
