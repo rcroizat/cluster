@@ -47,8 +47,8 @@ foreach($templates as $key => $name){
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">'.$name.'<i class="material-icons right">more_vert</i></span>
                         <p><a href="./templates/'.$name.'/index.html">Demo</a></p>
-                        <input name="group1" type="radio" id="aerial" />
-                        <label for="aerial">Choisir ce template</label>
+                        <input name="templateName" value="'.$name.'" type="radio" id="'.$name.'/" />
+                        <label for="'.$name.'/">Choisir ce template</label>
                     </div>
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4">Aerial<i class="material-icons right">close</i></span>
@@ -60,45 +60,9 @@ foreach($templates as $key => $name){
     }
 }
 ?>
-
-   <!--             
-    <div class="card small col s3 offset-s1">
-        <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator" src="img/template2.png">
-        </div>
-        <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">Musique<i class="material-icons right">more_vert</i></span>
-            <p><a href="templates\Musique\index.html"  target="_blank">Demo</a></p>
-            <input name="group1" type="radio" id="musique" />
-            <label for="musique">Choisir ce template</label>
-        </div>
-        <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">Musique<i class="material-icons right">close</i></span>
-            <p>Auteur : Cluster Team</p>
-            <p>Prix : 50€</p>
-            <p>License : 2 000€</p>
-        </div>
-    </div>
-    <div class="card small col s3 offset-s1">
-        <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator" src="img/background2.jpg">
-        </div>
-        <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">Business<i class="material-icons right">more_vert</i></span>
-            <p><a href="#">Demo</a></p>
-            <input name="group1" type="radio" id="business" />
-            <label for="business">Choisir ce template</label>
-        </div>
-        <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">Business<i class="material-icons right">close</i></span>
-            <p>Auteur : Cluster Team</p>
-            <p>Prix : 50€</p>
-            <p>License : 2 000€</p>
-        </div>
-    </div> -->
             </div>
             <div class="row">
-                <a href="template.html" class="waves-effect waves-light btn">Terminer <i class="material-icons right">send</i></a>
+                <a class="waves-effect waves-light btn send">Terminer <i class="material-icons right">send</i></a>
             </div>
         </div>
     </div>

@@ -18,3 +18,9 @@ $(document).ready(function() {
         console.log(field);
     });
 });
+
+
+$(".send").on("click", function() {
+    var template = $('input[name=templateName]:checked').val();
+    localStorage.setItem('templateName', template);
+});

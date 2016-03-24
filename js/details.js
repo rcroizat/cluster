@@ -33,6 +33,7 @@ $("#formDetails").on("click", '.delete', function() {
 
 $(".submit").on("click", function() {
     var $inputs = $('div[field]');
+    var fields = [];
     $inputs.each(function() {
         /* Dans chaque div field on recupere le nom et le type de champs */
        var fieldNumber = $(this).attr('field');
@@ -40,6 +41,7 @@ $(".submit").on("click", function() {
        var type = $(this).find('select.formInput').val();
        var data = { name: name, type: type }
        console.info(name + type + data.type + data.name);
-        localStorage.setItem(fieldNumber, JSON.stringify(data));
+       fields.push(data);
     });
+    localStorage.setItem('field', JSON.stringify(fields));
 });
