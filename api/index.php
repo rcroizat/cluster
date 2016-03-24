@@ -10,6 +10,9 @@ ini_set('display_errors', 1);
 // APP
 require('handler/WebsiteHandler.php');
 require('handler/InputHandler.php');
+require('handler/ThemeHandler.php');
+require('handler/ValThemeHandler.php');
+require('handler/UserHandler.php');
 
 require('db.php');
 require('Toro.php');
@@ -27,5 +30,14 @@ Toro::serve(array(
 
 	"1/input/:number"			=> "InputHandler",				// GET
 	"1/input/"					=> "InputHandler"				// POST
+	
+	"1/theme/:number"			=> "ThemeHandler",				// GET
+	"1/theme/"					=> "ThemeHandler",				// POST
+
+	"1/valTheme/:number"		=> "ValThemeHandler",			// GET
+	"1/valTheme/"				=> "ValThemeHandler"			// POST
+
+	"1/user/:number"			=> "UserHandler",				// GET
+	"1/user/"					=> "UserHandler"				// POST
 
 ));
