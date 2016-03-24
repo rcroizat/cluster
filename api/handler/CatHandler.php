@@ -1,6 +1,6 @@
 <?php
 
-class WebsiteCatHandler {
+class CatHandler {
 	function post(){
 
 		$_POST = array();
@@ -11,33 +11,31 @@ class WebsiteCatHandler {
 		global $db;
 		$this->db = &$db;
 
-		$websiteCatIdWebsite = trim($_POST['id_website']);
-		$websiteCatIdCat = trim($_POST['id_cat']);
+		$catName = trim($_POST['name']);
 		
 
-	 	$sql_insert = "INSERT INTO `website-cat` 
-	    ( `id_website`, `id_cat`)
-	    VALUES (:id_website, :id_cat";
+	 	$sql_insert = "INSERT INTO `cat` 
+	    ( `name`)
+	    VALUES (:name";
 
 	    $query_insert = $this->db->prepare($sql_insert);
-	    $query_insert->bindValue('id_website', $valThemeIdWebsite, PDO::PARAM_INT);
-	    $query_insert->bindValue('id_cat', $valThemeIdCat, PDO::PARAM_INT);
+	    $query_insert->bindValue('name', $catName, PDO::PARAM_STR);
 
 	    $query_insert->execute();
 
-	    $websiteCatId = $this->db->lastInsertId();
+	    $catId = $this->db->lastInsertId();
 
 	    header("HTTP/1.1 200 OK");
 	    // header("HTTP/1.1 400 Bad Request");
-		echo json_encode(array('id' => $websiteCatId ););
+		echo json_encode(array('id' => $catId ););
 	}
 
-	function get($websiteCatId){
+	function get($catId){
 
 		global $db;
 		$this->db = &$db;
 
-		$sql = "SELECT * FROM `website-cat` WHERE id = '".$websiteCatId."';";
+		$sql = "SELECT * FROM `cat` WHERE id = '".$catId."';";
 		$stmt =  $this->db->query($sql);
 		$website = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
