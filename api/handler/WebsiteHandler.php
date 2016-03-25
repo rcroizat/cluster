@@ -34,7 +34,8 @@ class WebsiteHandler {
 
 	 //    header("HTTP/1.1 200 OK");
 		// echo json_encode(array('id' => $websiteId ));
-		echo json_encode($_REQUEST);
+		// echo json_encode($_REQUEST);
+		echo json_encode('oloo');
 	}
 
 	function get($websiteId){
