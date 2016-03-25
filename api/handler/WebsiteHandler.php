@@ -36,6 +36,7 @@ class WebsiteHandler {
 		// echo json_encode(array('id' => $websiteId ));
 		echo json_encode($_POST);
 		echo json_encode(file_get_contents('php://input'));
+		echo json_encode(json_decode(file_get_contents('php://input')) );
 	}
 
 	function get($websiteId){
