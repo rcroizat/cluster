@@ -4,39 +4,37 @@ class WebsiteHandler {
 	function post(){
 
 		$_POST = json_decode(file_get_contents('php://input'));
-		// if(isset($_SERVER["CONTENT_TYPE"]) && strpos($_SERVER["CONTENT_TYPE"], "application/json") !== false) {
-		// 	$_POST = array_merge($_POST, (array) json_decode(trim(file_get_contents('php://input')), true));
-		// }
+		if(isset($_SERVER["CONTENT_TYPE"]) && strpos($_SERVER["CONTENT_TYPE"], "application/json") !== false) {
+			$_POST = array_merge($_POST, (array) json_decode(trim(file_get_contents('php://input')), true));
+		}
 
-		// global $db;
-		// $this->db = &$db;
+		global $db;
+		$this->db = &$db;
 
-		// $websiteName = trim($_POST['name']);
-		// $websiteUrl = trim($_POST['url']);
-		// $websiteDescription = trim($_POST['description']);
-		// $websiteIdType = trim($_POST['id_type']);
-		// $websiteIdTheme = trim($_POST['id_theme']);
+		$websiteName = trim($_POST['name']);
+		$websiteUrl = trim($_POST['url']);
+		$websiteDescription = trim($_POST['description']);
+		$websiteIdType = trim($_POST['id_type']);
+		$websiteIdTheme = trim($_POST['id_theme']);
 
-	 // 	$sql_insert = "INSERT INTO `website` 
-	 //    ( `name`, `url`, `user_registered`, `description`, `id_type`, `id_theme`)
-	 //    VALUES (:name, :url, :user_registered, :description, :id_type, :id_theme);";
+	 	$sql_insert = "INSERT INTO `website` 
+	    ( `name`, `url`, `user_registered`, `description`, `id_type`, `id_theme`)
+	    VALUES (:name, :url, :user_registered, :description, :id_type, :id_theme);";
 
-	 //    $query_insert = $this->db->prepare($sql_insert);
-	 //    $query_insert->bindValue('name', $websiteName, PDO::PARAM_STR);
-	 //    $query_insert->bindValue('url', $websiteUrl, PDO::PARAM_STR);
-	 //    $query_insert->bindValue('description', $websiteDescription, PDO::PARAM_STR);
-	 //    $query_insert->bindValue('id_type', $websiteIdType, PDO::PARAM_INT);
-	 //    $query_insert->bindValue('id_theme', $websiteIdTheme, PDO::PARAM_INT);
+	    $query_insert = $this->db->prepare($sql_insert);
+	    $query_insert->bindValue('name', $websiteName, PDO::PARAM_STR);
+	    $query_insert->bindValue('url', $websiteUrl, PDO::PARAM_STR);
+	    $query_insert->bindValue('description', $websiteDescription, PDO::PARAM_STR);
+	    $query_insert->bindValue('id_type', $websiteIdType, PDO::PARAM_INT);
+	    $query_insert->bindValue('id_theme', $websiteIdTheme, PDO::PARAM_INT);
 
-	 //    $query_insert->execute();
+	    $query_insert->execute();
 
-	 //    $websiteId = $this->db->lastInsertId();
+	    $websiteId = $this->db->lastInsertId();
 
-	 //    header("HTTP/1.1 200 OK");
-		// echo json_encode(array('id' => $websiteId ));
-		echo json_encode($_POST);
-		// echo json_encode(file_get_contents('php://input'));
-		// echo json_encode(json_decode(file_get_contents('php://input')) );
+	    header("HTTP/1.1 200 OK");
+		echo json_encode(array('id' => $websiteId ));
+
 	}
 
 	function get($websiteId){
