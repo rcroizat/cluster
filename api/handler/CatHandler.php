@@ -27,7 +27,7 @@ class CatHandler {
 
 	    header("HTTP/1.1 200 OK");
 	    // header("HTTP/1.1 400 Bad Request");
-		echo json_encode(array('id' => $catId ););
+		echo json_encode(array('id' => $catId ));
 	}
 
 	function get($catId){

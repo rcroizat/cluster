@@ -33,7 +33,7 @@ class WebsiteHandler {
 	    $websiteId = $this->db->lastInsertId();
 
 	    header("HTTP/1.1 200 OK");
-		echo json_encode(array('id' => $websiteId ););
+		echo json_encode(array('id' => $websiteId ));
 	}
 
 	function get($websiteId){

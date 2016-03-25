@@ -31,7 +31,7 @@ class ValThemeHandler {
 
 	    header("HTTP/1.1 200 OK");
 	    // header("HTTP/1.1 400 Bad Request");
-		echo json_encode(array('id' => $valThemeId ););
+		echo json_encode(array('id' => $valThemeId ));
 	}
 
 	function get($valThemeId){

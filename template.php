@@ -35,12 +35,12 @@ $dir    = './templates';
 $templates = scandir($dir);
 
 
-print_r($files1);
-print_r($files2);
+// print_r($files1);
+// print_r($files2);
 foreach($templates as $key => $name){
     if($name != '..' && $name != '.'){
         $name = ucfirst($name);    
-    echo ' <div class="card small col s3  offset-s1">
+    echo ' <div class="card small col l3 m5 s12 offset-l1 offset-m1 offset-s1">
                     <div class="card-image waves-effect waves-block waves-light">
                         <img class="activator materialboxed" src="./templates/'.$name.'/preview.png">
                     </div>

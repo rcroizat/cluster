@@ -30,7 +30,7 @@ class InputHandler {
 
 	    header("HTTP/1.1 200 OK");
 	    // header("HTTP/1.1 400 Bad Request");
-		echo json_encode(array('id' => $inputId ););
+		echo json_encode(array('id' => $inputId ));
 	}
 
 	function get($websiteId){

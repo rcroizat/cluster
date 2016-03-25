@@ -32,37 +32,37 @@ ToroHook::add("404", function() {
 
 Toro::serve(array(
 
-	"1/website/:number"			=> "WebsiteHandler",			// GET
-	"1/website/"				=> "WebsiteHandler",			// POST
+	"website/:number"			=> "WebsiteHandler",			// GET
+	"website/"				=> "WebsiteHandler",			// POST
 
-	"1/input/:number"			=> "InputHandler",				// GET
-	"1/input/"					=> "InputHandler"				// POST
+	"input/:number"			=> "InputHandler",				// GET
+	"input/"					=> "InputHandler",				// POST
 	
-	"1/theme/:number"			=> "ThemeHandler",				// GET
-	"1/theme/"					=> "ThemeHandler",				// POST
+	"theme/:number"			=> "ThemeHandler",				// GET
+	"theme/"					=> "ThemeHandler",				// POST
 
-	"1/valTheme/:number"		=> "ValThemeHandler",			// GET
-	"1/valTheme/"				=> "ValThemeHandler",			// POST
+	"valTheme/:number"		=> "ValThemeHandler",			// GET
+	"valTheme/"				=> "ValThemeHandler",			// POST
 
-	"1/user/:number"			=> "UserHandler",				// GET
-	"1/user/"					=> "UserHandler",				// POST
+	"user/:number"			=> "UserHandler",				// GET
+	"user/"					=> "UserHandler",				// POST
 
-	"1/type/:number"			=> "TypeHandler",				// GET
-	"1/type/"					=> "TypeHandler",				// POST
+	"type/:number"			=> "TypeHandler",				// GET
+	"type/"					=> "TypeHandler",				// POST
 
-	"1/websitecat/:number"		=> "WebsiteCatHandler",			// GET
-	"1/websitecat/"				=> "WebsiteCatHandler",			// POST
+	"websitecat/:number"		=> "WebsiteCatHandler",			// GET
+	"websitecat/"				=> "WebsiteCatHandler",			// POST
 
-	"1/cat/:number"				=> "CatHandler",				// GET
-	"1/cat/"					=> "CatHandler",				// POST
+	"cat/:number"				=> "CatHandler",				// GET
+	"cat/"					=> "CatHandler",				// POST
 
-	"1/val/:number"				=> "ValHandler",				// GET
-	"1/val/"					=> "ValHandler",				// POST
+	"val/:number"				=> "ValHandler",				// GET
+	"val/"					=> "ValHandler",				// POST
 
-	"1/item/:number"			=> "ItemHandler",				// GET
-	"1/item/"					=> "ItemHandler",				// POST
+	"item/:number"			=> "ItemHandler",				// GET
+	"item/"					=> "ItemHandler",				// POST
 
-	"1/role/:number"			=> "RoleHandler",				// GET
-	"1/role/"					=> "RoleHandler"				// POST
+	"role/:number"			=> "RoleHandler",				// GET
+	"role/"					=> "RoleHandler"				// POST
 
 ));

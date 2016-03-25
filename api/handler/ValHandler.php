@@ -29,7 +29,7 @@ class ValHandler {
 	    $valId = $this->db->lastInsertId();
 
 	    header("HTTP/1.1 200 OK");
-		echo json_encode(array('id' => $valId ););
+		echo json_encode(array('id' => $valId ));
 	}
 
 	function get($valId){

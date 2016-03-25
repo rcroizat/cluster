@@ -25,7 +25,7 @@ class RoleHandler {
 	    $roleId = $this->db->lastInsertId();
 
 	    header("HTTP/1.1 200 OK");
-		echo json_encode(array('id' => $roleId ););
+		echo json_encode(array('id' => $roleId ));
 	}
 
 	function get($roleId){
