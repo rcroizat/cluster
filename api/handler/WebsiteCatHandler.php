@@ -29,7 +29,7 @@ class WebsiteCatHandler {
 
 	    header("HTTP/1.1 200 OK");
 	    // header("HTTP/1.1 400 Bad Request");
-		echo json_encode(array('id' => $websiteCatId ););
+		echo json_encode(array('id' => $websiteCatId ));
 	}
 
 	function get($websiteCatId){

@@ -27,7 +27,7 @@ class ItemHandler {
 	    $itemId = $this->db->lastInsertId();
 
 	    header("HTTP/1.1 200 OK");
-		echo json_encode(array('id' => $itemId ););
+		echo json_encode(array('id' => $itemId ));
 	}
 
 	function get($itemId){

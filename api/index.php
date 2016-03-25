@@ -36,7 +36,7 @@ Toro::serve(array(
 	"1/website/"				=> "WebsiteHandler",			// POST
 
 	"1/input/:number"			=> "InputHandler",				// GET
-	"1/input/"					=> "InputHandler"				// POST
+	"1/input/"					=> "InputHandler",				// POST
 	
 	"1/theme/:number"			=> "ThemeHandler",				// GET
 	"1/theme/"					=> "ThemeHandler",				// POST

@@ -25,7 +25,7 @@ class TypeHandler {
 	    $typeId = $this->db->lastInsertId();
 
 	    header("HTTP/1.1 200 OK");
-		echo json_encode(array('id' => $typeId ););
+		echo json_encode(array('id' => $typeId ));
 	}
 
 	function get($typeId){
