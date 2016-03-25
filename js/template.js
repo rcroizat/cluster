@@ -23,23 +23,32 @@ $(document).ready(function() {
 $(".send").on("click", function() {
 
     var  fields = JSON.parse(localStorage.getItem('field'));
+/*    var data = {
+        template: $('input[name=templateName]:checked').val(),
+        category: localStorage.getItem('category'),
+        description: localStorage.getItem('description'),
+        name: localStorage.getItem('name'),
+        type: localStorage.getItem('type'),
+        url: localStorage.getItem('url')
+    };   */ 
+
     var data = {
-        template: $('input[name=templateName]:checked').val();
-        category: localStorage.getItem('category');
-        description: localStorage.getItem('description');
-        name: localStorage.getItem('name');
-        type: localStorage.getItem('type');
-        url: localStorage.getItem('url');
-    }
+        template: 1,
+        category: 2,
+        description: 'DESCRIPTION TEST lLALALDFEG',
+        name: localStorage.getItem('name'),
+        type: 2,
+        url: 'TESTURL'
+    };
 
 
-    $.post('1/website/', function(data) {
+    $.post('http://vps261052.ovh.net/1/website/', function(data) {
         $.each(fields, function(key, field) {
-
                 $.post('1/input/', function({idWebSite : data, type : field.type, val : field.val}){
-                    //SUCESS
+                    alert('good');
                     });
         });
+
     });
 
 
