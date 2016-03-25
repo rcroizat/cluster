@@ -21,6 +21,27 @@ $(document).ready(function() {
 
 
 $(".send").on("click", function() {
-    var template = $('input[name=templateName]:checked').val();
-    localStorage.setItem('templateName', template);
+
+    var  fields = JSON.parse(localStorage.getItem('field'));
+    var data = {
+        template: $('input[name=templateName]:checked').val();
+        category: localStorage.getItem('category');
+        description: localStorage.getItem('description');
+        name: localStorage.getItem('name');
+        type: localStorage.getItem('type');
+        url: localStorage.getItem('url');
+    }
+
+
+    $.post('1/website/', function(data) {
+        $.each(fields, function(key, field) {
+
+                $.post('1/input/', function({idWebSite : data, type : field.type, val : field.val}){
+                    //SUCESS
+                    });
+        });
+    });
+
+
 });
+

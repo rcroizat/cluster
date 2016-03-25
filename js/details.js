@@ -37,10 +37,9 @@ $(".submit").on("click", function() {
     $inputs.each(function() {
         /* Dans chaque div field on recupere le nom et le type de champs */
        var fieldNumber = $(this).attr('field');
-       var name = $(this).find('div.formInput').html();
+       var val = $(this).find('div.formInput').html();
        var type = $(this).find('select.formInput').val();
-       var data = { name: name, type: type }
-       console.info(name + type + data.type + data.name);
+       var data = { val: val, type: type }
        fields.push(data);
     });
     localStorage.setItem('field', JSON.stringify(fields));
