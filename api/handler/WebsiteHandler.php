@@ -18,8 +18,8 @@ class WebsiteHandler {
 		$websiteIdTheme = trim($_POST['id_theme']);
 
 	 	$sql_insert = "INSERT INTO `website` 
-	    ( `name`, `url`, `user_registered`, `description`, `id_type`, `id_theme`)
-	    VALUES (:name, :url, :user_registered, :description, :id_type, :id_theme);";
+	    ( `name`, `url`, `description`, `id_type`, `id_theme`)
+	    VALUES (:name, :url, :description, :id_type, :id_theme);";
 
 	    $query_insert = $this->db->prepare($sql_insert);
 	    $query_insert->bindValue('name', $websiteName, PDO::PARAM_STR);
