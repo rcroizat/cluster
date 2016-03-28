@@ -40,16 +40,21 @@ $(".send").on("click", function() {
         type: 2,
         url: 'TESTURL'
     };
+  $.each(fields, function(key, field) {
+           console.log(field.val);
 
-
+        });
+/*
     $.post('http://vps261052.ovh.net/1/website/', function(data) {
+        var id = data;
         $.each(fields, function(key, field) {
-                $.post('1/input/', function({idWebSite : data, type : field.type, val : field.val}){
+            console.log('type '+ field.type+' val '+field.val)
+                $.post('1/input/', function({idWebSite : id, type : field.type, val : field.val}){
                     alert('good');
                     });
         });
 
-    });
+    });*/
 
 
 });

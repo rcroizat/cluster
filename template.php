@@ -35,8 +35,6 @@ $dir    = './templates';
 $templates = scandir($dir);
 
 
-// print_r($files1);
-// print_r($files2);
 foreach($templates as $key => $name){
     if($name != '..' && $name != '.'){
         $name = ucfirst($name);    
