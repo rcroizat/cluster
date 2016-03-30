@@ -12,6 +12,7 @@
  		console.log(theme.name);
 				$('#imageTemplate').attr("src",'./templates/'+theme.name+'/preview.png');
 				$('#link').attr("href",'./templates/'+theme.name+'/index.html');
+				$('#linkEdit').attr("href",'./templates/'+theme.name+'/index.html');
 				$('#link').append("Editer");
 				
 	        });

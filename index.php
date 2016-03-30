@@ -1,31 +1,8 @@
-<!DOCTYPE html>
-<html lang="fr">
+<?php 
+$title = "Cluster";
+require('include/header.php'); 
+?>
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
-    <title>Cluster</title>
-    <!-- CSS  -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
-</head>
-
-<body>
-    <nav class="white" role="navigation">
-        <div class="nav-wrapper container">
-            <a id="logo-container" href="#" class="brand-logo">Cluster</a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="#">Mon compte</a></li>
-                <li><a href="#">Tableau de bord</a></li>
-            </ul>
-            <ul id="nav-mobile" class="side-nav">
-                <li><a href="#">Mon compte</a></li>
-                <li><a href="#">Tableau de bord</a></li>
-            </ul>
-            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-        </div>
-    </nav>
     <div id="index-banner" class="parallax-container">
         <div class="section no-pad-bot">
             <div class="container">
@@ -36,7 +13,7 @@
                     <h5 class="header col s12 light">Développez votre communauté</h5>
                 </div>
                 <div class="row center">
-                    <a href="create.html" id="download-button" class="btn-large waves-effect waves-light orange lighten-1">Créez votre boutique en quelques minutes</a>
+                    <a href="create.php" id="download-button" class="btn-large waves-effect waves-light orange lighten-1">Créez votre boutique en quelques minutes</a>
                 </div>
                 <br>
                 <br>
@@ -103,43 +80,9 @@
         </div>
         <div class="parallax"><img src="img/background3.jpg" alt="Unsplashed background img 3"></div>
     </div>
-    <footer class="page-footer orange darken-3">
-        <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">Concept Cluster</h5>
-                    <p class="grey-text text-lighten-4">Nous avons souhaité, dans cette plate-forme “Cluster” proposer un espace simple aux particuliers et aux professionnels pour la mise en location de biens. L’utilisateur peut créer en quelque minutes un espace de location en ligne. Chaque internaute, peut s’en servir sans contrainte.</p>
-                </div>
-                <div class="col l3 s12">
-                    <h5 class="white-text">Instrument</h5>
-                    <ul>
-                        <li><a class="white-text" href="#!">Piano</a></li>
-                        <li><a class="white-text" href="#!">Guitare Basse</a></li>
-                        <li><a class="white-text" href="#!">Flute</a></li>
-                        <li><a class="white-text" href="#!">Saxophone</a></li>
-                    </ul>
-                </div>
-                <div class="col l3 s12">
-                    <h5 class="white-text">Avis utilisateurs</h5>
-                    <ul>
-                        <li><a class="white-text" href="#!">David</a></li>
-                        <li><a class="white-text" href="#!">Guillaume</a></li>
-                        <li><a class="white-text" href="#!">Rebecca</a></li>
-                        <li><a class="white-text" href="#!">Daniel</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer-copyright">
-            <div class="container">
-                Désigné par <a class="brown-text text-lighten-3" href="template.html">Cluster</a>
-            </div>
-        </div>
-    </footer>
-    <!--  Scripts-->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="js/materialize.js"></script>
-    <script src="js/init.js"></script>
-</body>
 
-</html>
+
+
+<?php 
+require('include/footer.php'); 
+?>

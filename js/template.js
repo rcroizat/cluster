@@ -51,10 +51,7 @@ $(".send").on("click", function() {
             var type = field.type;
             var val = field.val;
                 $.post('1/input/', 
-                    function({
-                        idWebSite : id, 
-                        type : type, 
-                        val : val}){
+                    function({idWebSite : id, type : type,  val : val}){
                     alert('good');
                     });
         });
