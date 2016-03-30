@@ -19,7 +19,7 @@ class ValThemeHandler {
 	    VALUES (:id_website, :name, :value";
 
 	    $query_insert = $this->db->prepare($sql_insert);
-	    $query_insert->bindValue('id_website', $valThemeIdWebsite, PDO::PARAM_INT);
+	    $query_insert->bindValue('id_website', (int) $valThemeIdWebsite, PDO::PARAM_INT);
 	    $query_insert->bindValue('name', $valThemeName, PDO::PARAM_STR);
 	    $query_insert->bindValue('value', $valThemeValue, PDO::PARAM_STR);
 
@@ -29,15 +29,15 @@ class ValThemeHandler {
 
 	    header("HTTP/1.1 200 OK");
 	    // header("HTTP/1.1 400 Bad Request");
-		echo json_encode(array('id' => $valThemeId, 'valThemeIdWebsite' => $valThemeIdWebsite, 'valThemeName' => $valThemeName, 'valThemeValue' => $valThemeValue ));
+		echo json_encode(array('id' => $valThemeId, 'valThemeIdWebsite' => $valThemeIdWebsite, 'valThemeName' => $valThemeName, 'valThemeValue' => $valThemeValue, 'sql_insert' => $sql_insert ));
 	}
 
-	function get($valThemeId){
+	function get($websiteId){
 
 		global $db;
 		$this->db = &$db;
 
-		$sql = "SELECT * FROM `val_theme` WHERE id = '".$valThemeId."';";
+		$sql = "SELECT * FROM `val_theme` WHERE id_website = '".$websiteId."';";
 		$stmt =  $this->db->query($sql);
 		$website = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
