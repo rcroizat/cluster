@@ -32,14 +32,14 @@ ToroHook::add("404", function() {
 
 Toro::serve(array(
 
-	"website/:number"			=> "WebsiteHandler",			// GET
+	"website/:number"		=> "WebsiteHandler",			// GET
 	"website/"				=> "WebsiteHandler",			// POST
 
 	"input/:number"			=> "InputHandler",				// GET
-	"input/"					=> "InputHandler",				// POST
+	"input/"				=> "InputHandler",				// POST
 	
 	"theme/:number"			=> "ThemeHandler",				// GET
-	"theme/"					=> "ThemeHandler",				// POST
+	"theme/"				=> "ThemeHandler",				// POST
 
 	"valTheme/:number"		=> "ValThemeHandler",			// GET
 	"valTheme/"				=> "ValThemeHandler",			// POST
@@ -50,13 +50,13 @@ Toro::serve(array(
 	"type/:number"			=> "TypeHandler",				// GET
 	"type/"					=> "TypeHandler",				// POST
 
-	"websitecat/:number"		=> "WebsiteCatHandler",			// GET
-	"websitecat/"				=> "WebsiteCatHandler",			// POST
+	"websitecat/:number"	=> "WebsiteCatHandler",			// GET
+	"websitecat/"			=> "WebsiteCatHandler",			// POST
 
-	"cat/:number"				=> "CatHandler",				// GET
+	"cat/:number"			=> "CatHandler",				// GET
 	"cat/"					=> "CatHandler",				// POST
 
-	"val/:number"				=> "ValHandler",				// GET
+	"val/:number"			=> "ValHandler",				// GET
 	"val/"					=> "ValHandler",				// POST
 
 	"item/:number"			=> "ItemHandler",				// GET

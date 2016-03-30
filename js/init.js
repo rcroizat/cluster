@@ -6,12 +6,10 @@
 
 
 
-
-
-
+/*
     $("body").on("click",".",function(){
     	
-    });
+    });*/
 
   }); // end of document ready
 })(jQuery); // end of jQuery name space
