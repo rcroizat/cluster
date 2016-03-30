@@ -16,6 +16,19 @@
     });
 
 
+
+      
+
+      setTimeout(function(){ $.get('http://vps261052.ovh.net/api/index.php/valTheme/7', function(valThemes) {
+        console.log('valThemes');
+        console.log(valThemes);
+        $.each(valThemes, function(key, valTheme) {
+          $('#' + valTheme.name).text(valTheme.value);
+        });
+
+      }); }, 500);
+
+
   }); // end of document ready
 
 
@@ -54,17 +67,11 @@ $(".sendText").on("click", function() {
     var content = $(element).text();
     var id = element.id;
 
-    // $.post("http://vps261052.ovh.net/api/index.php/valTheme/", {
-    //   'id_website': 1,
-    //   'name': id,
-    //   'value': content
-    // });
-
     $.ajax({
       url: 'http://vps261052.ovh.net/api/index.php/valTheme/',
       type: 'POST',
       data: JSON.stringify({
-        'id_website': 1,
+        'id_website': 7,
         'name': id,
         'value': content
       }),
@@ -78,3 +85,4 @@ $(".sendText").on("click", function() {
   });
 
 });
+
