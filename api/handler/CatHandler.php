@@ -40,7 +40,7 @@ class CatHandler {
 			$sql = "SELECT * FROM `cat` WHERE id = '".$catId."';";
 		}
 
- .		$stmt =  $this->db->query($sql);
+		$stmt =  $this->db->query($sql);
 		$website = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 		echo json_encode($website);
