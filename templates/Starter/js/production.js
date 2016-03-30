@@ -45,8 +45,3 @@ slider.noUiSlider.on('update', function ( values, handle ) {
 		valueMin.innerHTML = values[handle];
 	}
 });
-
-import whatwg-fetch;
-import restful, { fetchBackend } from 'restful.js';
-
-const api = restful('http://vps261052.ovh.net/api/index.php', fetchBackend(fetch));
