@@ -12,6 +12,12 @@ class ValThemeHandler {
 		$valThemeIdWebsite = trim($_POST['id_website']);
 		$valThemeName = trim($_POST['name']);
 		$valThemeValue = trim($_POST['value']);
+
+		$sql = "DELETE FROM `val_theme` WHERE `id_website` = :id_website;";
+
+		$query_update = $this->db->prepare($sql);
+		$query_update->bindValue('id_website', $valThemeIdWebsite);
+		$query_update->execute();
 		
 
 	 	$sql_insert = "INSERT INTO `val_theme` 
