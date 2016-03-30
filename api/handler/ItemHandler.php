@@ -33,9 +33,15 @@ class ItemHandler {
 		global $db;
 		$this->db = &$db;
 
-		$sql = "SELECT * FROM `item` WHERE id = '".$itemId."';";
-		$stmt =  $this->db->query($sql);
-		$website = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+		if ($catId == 0) {
+			$sql = "SELECT * FROM `item`;";
+		}else{
+			$sql = "SELECT * FROM `item` WHERE id = '".$itemId."';";
+		}
+		
+			$stmt =  $this->db->query($sql);
+			$website = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 		echo json_encode($website);
 	}
