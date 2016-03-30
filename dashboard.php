@@ -28,33 +28,17 @@
     </nav>
     <div class="container">
         <div class="section">
-            <ul class="collection">
+            <ul class="collection" id="websites">
             <li class="collection-item avatar">
-              <img src="images/yuna.jpg" alt="" class="circle">
-              <span class="title">Title</span>
-              <p>First Line <br>
-                 Second Line
+              <img  alt="" id="imageTemplate" class="circle">
+              <span class="title" id="title"></span>
+              <p id="description">
               </p>
+            <a href="./templates/'.$name.'/index.html" id="link"></a></p>
               <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
             </li>
-            <li class="collection-item avatar">
-              <i class="material-icons circle">folder</i>
-              <span class="title">Title</span>
-              <p>First Line <br>
-                 Second Line
-              </p>
-              <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-            </li>
-            <li class="collection-item avatar">
-              <i class="material-icons circle green">insert_chart</i>
-              <span class="title">Title</span>
-              <p>First Line <br>
-                 Second Line
-              </p>
-              <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-            </li>
-            <li class="collection-item avatar">
-              <i class="material-icons circle red">play_arrow</i>
+             <li class="collection-item avatar">
+              <img src="./templates/starter/preview.png" alt="" class="circle">
               <span class="title">Title</span>
               <p>First Line <br>
                  Second Line
@@ -101,7 +85,7 @@
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="js/materialize.js"></script>
     <script src="js/init.js"></script>
-    <script src="js/template.js"></script>
+    <script src="js/dashboard.js"></script>
 </body>
 
 </html>

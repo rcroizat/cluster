@@ -34,7 +34,7 @@ class ThemeHandler {
 
 		$sql = "SELECT * FROM `theme` WHERE id = '".$themeId."';";
 		$stmt =  $this->db->query($sql);
-		$website = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		$website = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		echo json_encode($website);
 	}
