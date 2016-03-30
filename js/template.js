@@ -45,7 +45,7 @@ $(".send").on("click", function() {
 
         });*/
 
-    $.post('http://vps261052.ovh.net/1/website/', function(data) {
+    $.post('http://vps261052.ovh.net/api/index.php/website', function(data) {
         var id = data;
         $.each(fields, function(key, field) {
             var type = field.type;
