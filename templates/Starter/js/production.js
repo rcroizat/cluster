@@ -16,6 +16,19 @@
     });
 
 
+
+      
+
+      setTimeout(function(){ $.get('http://vps261052.ovh.net/api/index.php/valTheme/7', function(valThemes) {
+        console.log('valThemes');
+        console.log(valThemes);
+        $.each(valThemes, function(key, valTheme) {
+          $('#' + valTheme.name).text(valTheme.value);
+        });
+
+      }); }, 500);
+
+
   }); // end of document ready
 
 
@@ -73,15 +86,3 @@ $(".sendText").on("click", function() {
 
 });
 
-$.get('http://vps261052.ovh.net/api/index.php/valTheme/7', function(valThemes) {
-  console.log('valThemes');
-  console.log(valThemes);
-  $.each(valTheme, function(key, valTheme) {
-    // $('#valTheme').append('<option value="' + categorie.id + '">' + categorie.name + '</option>')
-    console.log('valTheme');
-    console.log(valTheme);
-  });
-
-  $('select').material_select();
-
-});
