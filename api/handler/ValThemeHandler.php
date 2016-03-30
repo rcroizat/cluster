@@ -16,7 +16,7 @@ class ValThemeHandler {
 
 	 	$sql_insert = "INSERT INTO `val_theme` 
 	    ( `id_website`, `name`, `value`)
-	    VALUES (:id_website, :name, :value";
+	    VALUES (:id_website, :name, :value)";
 
 	    $query_insert = $this->db->prepare($sql_insert);
 	    $query_insert->bindValue('id_website', (int) $valThemeIdWebsite, PDO::PARAM_INT);
