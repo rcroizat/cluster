@@ -33,7 +33,13 @@ class CatHandler {
 		global $db;
 		$this->db = &$db;
 
-		$sql = "SELECT * FROM `cat` WHERE id = '".$catId."';";
+		if ($catId == 0) {
+			$sql = "SELECT * FROM `cat`;";
+		}
+		else{
+			$sql = "SELECT * FROM `cat` WHERE id = '".$catId."';";
+		}
+
 		$stmt =  $this->db->query($sql);
 		$website = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
